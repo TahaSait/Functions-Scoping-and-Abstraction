@@ -1,5 +1,6 @@
-    
+"""User Input"""
 def register_Vehicle():
+    """Lets user register a vehicle if there are spaces open"""
     plate_reader = open("Plates.txt")
     card_reader = open("Cards.txt")
 

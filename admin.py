@@ -1,5 +1,7 @@
-def verify_vehicle(plate):
+"""Admin Inputs"""
 
+def verify_vehicle(plate):
+    """Verfies wether a vehicles plate is in our system or not"""
     file_reader = open("Plates.txt")
     plates = file_reader.read().split()
     file_reader.close()
