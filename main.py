@@ -29,7 +29,7 @@ while True:
                 admin.verify_vehicle(plate)
 
             elif choice == "3":
-                admin.display_vehicle()
+                admin.display_vehicles()
 
             elif choice == "4":
                 admin.display_charges()
@@ -38,7 +38,7 @@ while True:
                 admin.remove_vehicle()
 
             elif choice == "6":
-                admin.clear_vehicle()
+                admin.clear_vehicles()
         else:
             print("Incorrect Password!")
 
