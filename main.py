@@ -35,11 +35,12 @@ while True:
                 admin.display_charges()
 
             elif choice == "5":
-                admin.remove_vehicle()
+                vehicle = input("Enter Vehicle: ")
+                admin.remove_vehicle(vehicle)
 
             elif choice == "6":
                 admin.clear_vehicles()
         else:
             print("Incorrect Password!")
 
-    input("Press Enter to continue")
+    input("Press Enter to continue....")
