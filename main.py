@@ -25,22 +25,22 @@ while True:
          break
     
     elif choice == "1":
-        plate_num, card_num = user.register_Vehicle(plates)
-
-        plates.append(plate_num)
-        cards.append(card_num)
+        plate, cards = user.register_Vehicle(plates,cards)
 
     elif choice in ["2","3","4","5","6"]:
         password_check = admin.check_password()
         if password_check == True:
             if choice == "2":
+                print("Verify your registration")
                 plate = input("Enter your plate number: ")
-                admin.verify_vehicle(plate)
+                admin.verify_vehicle(plate, plates)
 
             elif choice == "3":
+                print(f"A list of registered vehicles for today")
                 admin.display_vehicles(plates, cards)
 
             elif choice == "4":
+                print(f"Daily parking summary for today")
                 admin.display_charges(plates, cards)
 
             elif choice == "5":

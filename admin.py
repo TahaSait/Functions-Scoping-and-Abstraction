@@ -21,21 +21,17 @@ def file_writer(plates, cards):
     card_writer.write(cards_joined)
     card_writer.close()
     
-def verify_vehicle(plate):
+def verify_vehicle(plate, plates):
     """Verfies wether a vehicles plate is in our system or not"""
-    file_reader = open("Plates.txt")
-    plates = file_reader.read().split()
-    file_reader.close()
     if plate in plates:
 
-        print(plate)
+        print(f"The vehicle with plate# {plate} is registered in the lot")
 
     else:
 
-        print("None")
+        print("The vehicle is NOT registered")
 
 def display_vehicles(plates, cards):
-    
     print(f"="*20)
     print(" "*7,"Plate",sep="")
     print("="*20)
@@ -95,7 +91,7 @@ def remove_vehicle(plate_number, plates_list, cards_list):
 
 def clear_vehicles():
     """Clears Vehicles from the lot in preparation for next set"""
-
+    print("All vehicle were removed and the lot is empty")
     clear = open("Plates.txt","W")
     clear.close
 
