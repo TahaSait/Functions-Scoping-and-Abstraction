@@ -1,15 +1,11 @@
 """User Input"""
-def register_Vehicle():
+def print_menu():
+        print(f"Select from the following options\n[1] Register a vehicle\n[2] Verify vehicle registration\n[3] Display registered vehicles and save them to a file\
+\n[4] Display daily charges a save them to file\n[5] Remove a vehicle\n[6] Clear vehicles\n[0] Exit")
+        
+def register_Vehicle(plates):
     """Lets user register a vehicle if there are spaces open"""
-    plate_reader = open("Plates.txt")
-    card_reader = open("Cards.txt")
-
-    plates = plate_reader.read().split()
-    cards = card_reader.read().split()
-
-    plate_reader.close()
-    card_reader.close()
-
+    
     if len(plates) >= 50:
 
         print("Sorry")
@@ -24,15 +20,7 @@ def register_Vehicle():
 
         else:
 
-            plates.append(plate_Num)
-            plate_writer = open("Plates.txt", "w")
-            plates_joined = " ".join(plates)
-            plate_writer.write(plates_joined)
-            plate_writer.close()
-
             card_Num = input(f"Enter your card number (4.00 charge): ")
-            cards.append(card_Num)
-            card_writer = open("Cards.txt", "w")
-            cards_joined = " ".join(cards)
-            card_writer.write(cards_joined)
-            card_writer.close()
+
+            return plate_Num, card_Num
+            
