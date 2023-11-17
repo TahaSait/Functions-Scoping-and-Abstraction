@@ -45,7 +45,7 @@ while True:
 
             elif choice == "5":
                 vehicle = input("Enter Vehicle: ")
-                admin.remove_vehicle(vehicle)
+                plates, cards = admin.remove_vehicle(vehicle, plates, cards)
 
             elif choice == "6":
                 admin.clear_vehicles()
